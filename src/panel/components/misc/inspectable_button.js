@@ -16,7 +16,7 @@ import 'san-mui/lib/Icon/Icon.styl';
 
 export default class InspectableButton extends Component {
 
-    static template = `
+    static template = /* html */`
         <div
             class="inspectable-button-wrapper"
             on-mouseover="highlight"

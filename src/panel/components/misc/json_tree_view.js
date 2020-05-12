@@ -14,7 +14,7 @@ import 'json-tree-view/devtools.css';
 
 export default class JsonTreeView extends Component {
 
-    static template = `
+    static template = /* html */`
         <div class="s-json-tree-view">
         </div>
     `;
