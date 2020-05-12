@@ -1,46 +1,47 @@
-# &lt;San-DevTool /&gt;
+# San-DevTool
 
 Browser developer tools extension for debugging San.
 
-
 ## Download
 
-### git:
+### git
 
+```bash
+git clone git@github.com:ecomfe/san-devtool.git
+cd san-devtool
+npm i
+npm run build
+cd dist
 ```
-$ git clone git@github.com:ecomfe/san-devtool.git
-$ cd san-devtool
-$ npm i
-$ npm run build
-$ cd dist
-```
+
 Navigate to chrome://extensions in Chrome/Chromium to load the unpacked extension from dist directory.
 
-### npm:
+### npm
 
+```bash
+npm install san-devtool -g
+san-devtool --url=localhost:8005
 ```
-$ npm install san-devtool -g
-$ san-devtool --url=localhost:8005
-```
+
 san-devtool command will launch default Chrome browser to inspect the specified url.
 
 #### san-devtool options
- - --chrome-path alias -c: Path of Chrome/Chromium executable.
- - --directory alias -d: Specify the directory for unpacked san-devtool.
- - --url alias -u: Specify the url to load.
- - --auto alias -a: Open devtools automatically.
- - --kill alias -k: Kill entire browser before loading san-devtool.
- - --port alias -p: Remote debugging port number to use.
- - --force-quit alias -f: Close the Chrome/Chromium process on `Ctrl-C`
 
+- --chrome-path alias -c: Path of Chrome/Chromium executable.
+- --directory alias -d: Specify the directory for unpacked san-devtool.
+- --url alias -u: Specify the url to load.
+- --auto alias -a: Open devtools automatically.
+- --kill alias -k: Kill entire browser before loading san-devtool.
+- --port alias -p: Remote debugging port number to use.
+- --force-quit alias -f: Close the Chrome/Chromium process on `Ctrl-C`
 
-### Chrome App Store:
+### Chrome App Store
 
 [San Devtool](https://chrome.google.com/webstore/detail/san-devtool/pjnngoafflflkagpebgfifjejlnfhahc?utm_source=chrome-ntp-icon)
 
 ## User Guide
- - [简体中文](https://github.com/ecomfe/san-devtool/blob/master/docs/user_guide.md)
 
+- [简体中文](https://github.com/ecomfe/san-devtool/blob/master/docs/user_guide.md)
 
 ## ChangeLog
 
