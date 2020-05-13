@@ -1,16 +1,16 @@
 /**
  * San Devtool
- * Copyright 2017 Ecomfe. All rights reserved.
+ * Copyright 2020 Ecomfe. All rights reserved.
  *
- * @file Create developer tools panel
+ * @file Create san panel dynamically in devtools if needed
+ * @author rayjune(rayjune.x@gmail.com)
  */
 
-import Messenger from 'chrome-ext-messenger';
-
 let created = false;
+let createdCheckInterval = setInterval(createPanel, 1000);
 
-function createDevtoolPanelIfNeeded() {
-    chrome.devtools.network.onNavigated.addListener(createDevtoolPanelIfNeeded);
+function createPanel() {
+    chrome.devtools.network.onNavigated.addListener(createPanel);
 
     if (created) {
         return;
@@ -23,22 +23,15 @@ function createDevtoolPanelIfNeeded() {
             if (!hasSan || created) {
                 return;
             }
-            
+
             chrome.devtools.panels.create(
                 'San',
                 '../../icons/logo128.png',
-                'html/devtool/panel_index.html',
-                function (panel) {
-                    // panel loaded
-                }
+                'html/devtool/panel_index.html'
             );
             created = true;
         }
     );
 }
 
-//chrome.devtools.network.onNavigated.addListener(createDevtoolPanelIfNeeded);
-
-let createdCheckInterval = setInterval(createDevtoolPanelIfNeeded, 1000);
-
-createDevtoolPanelIfNeeded();
+createPanel();

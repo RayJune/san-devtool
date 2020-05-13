@@ -35,8 +35,8 @@ san-devtool
 ├─ src
 │  ├─ html
 │  │  ├─ devtool
-│  │  │  ├─ devtool_background.html     # devtools 的入口文件，默认不渲染 san 面板
-│  │  │  └─ panel_index.html            # 根据 devtool_background.js 中的判断来决定是否 san 面板
+│  │  │  ├─ devtool_background.html     # devtools 的入口文件，用来进行判断是否加载、渲染 devtools 中的 san 面板
+│  │  │  └─ panel_index.html            # san 面板
 │  │  └─ popup
 │  │     └─ popup.html                  # popup
 │  ├─ icons                             # 插件所用 icon
